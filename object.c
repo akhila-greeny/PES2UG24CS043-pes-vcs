@@ -98,7 +98,6 @@ int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out
     if (type == OBJ_BLOB) type_str = "blob";
     else if (type == OBJ_TREE) type_str = "tree";
     else type_str = "commit";
-
     // Header
     char header[64];
     int header_len = snprintf(header, sizeof(header), "%s %zu", type_str, len);
